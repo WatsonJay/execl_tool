@@ -40,7 +40,6 @@ namespace execl_tool
             OleDbConnection connect = new OleDbConnection(conStr);
             try
             {
-            
                 using (OleDbCommand cmd = new OleDbCommand(sql, connect))
                 {
                     if (connect.State == System.Data.ConnectionState.Closed)
@@ -126,7 +125,7 @@ namespace execl_tool
             {
                 return true;
             }
-            else;
+            else
             {
                 return false;
             }

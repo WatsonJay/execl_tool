@@ -62,5 +62,43 @@ namespace execl_tool
             string sql_search = "SELECT ID,table_name,table_show_name FROM table_relation WHERE table_name ='" + table+"'";
             return db_connect.have_line(sql_search);
         }
+
+        public static void delrelation(int ID)
+        {
+
+            //对数据库进添加一个用户操作
+            string sql = "DELETE FROM table_relation WHERE ID = @ID";
+            OleDbParameter[] para = {
+                             new OleDbParameter("@ID",OleDbType.Integer),
+                             /*
+                              * 我不知道这样写有什么区别，除了更简单还有什么好处
+                                new OleDbParameter("@age",age)
+                              */
+                         };
+            para[0].Value = ID;
+
+            db_connect.runsql(sql, para);
+        }
+
+        public static void updaterelation(int ID, string table, string show_name)
+        {
+
+            //对数据库进添加一个用户操作
+            string sql = "UPDATE table_relation SET table_name = @table_name,table_show_name=@table_show_name WHERE ID = @ID";
+            OleDbParameter[] para = {
+                             new OleDbParameter("@table_name",OleDbType.VarChar),
+                             new OleDbParameter("@table_show_name",OleDbType.VarChar),
+                             new OleDbParameter("@ID",OleDbType.Integer),
+                             /*
+                              * 我不知道这样写有什么区别，除了更简单还有什么好处
+                                new OleDbParameter("@age",age)
+                              */
+                         };
+            para[0].Value = table;
+            para[1].Value = show_name;
+            para[2].Value = ID;
+
+            db_connect.runsql(sql, para);
+        }
     }
 }

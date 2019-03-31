@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
+            this.table_id = new CCWin.SkinControl.SkinLabel();
             this.show_name = new CCWin.SkinControl.SkinTextBox();
             this.skinLabel2 = new CCWin.SkinControl.SkinLabel();
             this.table_list = new CCWin.SkinControl.SkinComboBox();
@@ -44,7 +45,6 @@
             this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
             this.skinButton4 = new CCWin.SkinControl.SkinButton();
             this.show_table = new CCWin.SkinControl.SkinDataGridView();
-            this.checkColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.skinPanel1.SuspendLayout();
             this.skinPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.show_table)).BeginInit();
@@ -53,6 +53,7 @@
             // skinPanel1
             // 
             this.skinPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.skinPanel1.Controls.Add(this.table_id);
             this.skinPanel1.Controls.Add(this.show_name);
             this.skinPanel1.Controls.Add(this.skinLabel2);
             this.skinPanel1.Controls.Add(this.table_list);
@@ -69,6 +70,18 @@
             this.skinPanel1.NormlBack = null;
             this.skinPanel1.Size = new System.Drawing.Size(388, 103);
             this.skinPanel1.TabIndex = 0;
+            // 
+            // table_id
+            // 
+            this.table_id.AutoSize = true;
+            this.table_id.BackColor = System.Drawing.Color.Transparent;
+            this.table_id.BorderColor = System.Drawing.Color.White;
+            this.table_id.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.table_id.Location = new System.Drawing.Point(13, 63);
+            this.table_id.Name = "table_id";
+            this.table_id.Size = new System.Drawing.Size(0, 17);
+            this.table_id.TabIndex = 9;
+            this.table_id.Visible = false;
             // 
             // show_name
             // 
@@ -269,60 +282,55 @@
             this.show_table.AllowUserToDeleteRows = false;
             this.show_table.AllowUserToResizeColumns = false;
             this.show_table.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.show_table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.show_table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.show_table.BackgroundColor = System.Drawing.SystemColors.Window;
             this.show_table.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.show_table.ColumnFont = null;
             this.show_table.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.show_table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.show_table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.show_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.show_table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.checkColumn});
             this.show_table.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.show_table.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.show_table.DefaultCellStyle = dataGridViewCellStyle3;
             this.show_table.Dock = System.Windows.Forms.DockStyle.Fill;
             this.show_table.EnableHeadersVisualStyles = false;
             this.show_table.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.show_table.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.show_table.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
             this.show_table.Location = new System.Drawing.Point(4, 135);
+            this.show_table.MultiSelect = false;
             this.show_table.Name = "show_table";
+            this.show_table.ReadOnly = true;
             this.show_table.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.show_table.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.show_table.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.show_table.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.show_table.RowTemplate.Height = 23;
+            this.show_table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.show_table.Size = new System.Drawing.Size(388, 221);
             this.show_table.TabIndex = 2;
             this.show_table.TitleBack = null;
             this.show_table.TitleBackColorBegin = System.Drawing.Color.White;
             this.show_table.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
-            // 
-            // checkColumn
-            // 
-            this.checkColumn.Frozen = true;
-            this.checkColumn.HeaderText = "";
-            this.checkColumn.Name = "checkColumn";
-            this.checkColumn.Width = 21;
+            this.show_table.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.show_table_CellMouseClick);
             // 
             // confForm
             // 
@@ -340,6 +348,7 @@
             this.ShowDrawIcon = false;
             this.Text = "设置";
             this.TitleCenter = false;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.confForm_FormClosing);
             this.Load += new System.EventHandler(this.confForm_Load);
             this.skinPanel1.ResumeLayout(false);
             this.skinPanel1.PerformLayout();
@@ -362,6 +371,6 @@
         private CCWin.SkinControl.SkinLabel skinLabel2;
         private CCWin.SkinControl.SkinButton skinButton4;
         private CCWin.SkinControl.SkinDataGridView show_table;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn checkColumn;
+        private CCWin.SkinControl.SkinLabel table_id;
     }
 }
