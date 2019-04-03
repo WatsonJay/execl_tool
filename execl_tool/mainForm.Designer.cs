@@ -44,6 +44,10 @@
             this.xpPanelGroup1 = new UIComponents.XPPanelGroup();
             this.xpPanel3 = new UIComponents.XPPanel(193);
             this.itemLayoutPanel4 = new UIComponents.ItemLayoutPanel();
+            this.skinGroupBox1 = new CCWin.SkinControl.SkinGroupBox();
+            this.skinRadioButton3 = new CCWin.SkinControl.SkinRadioButton();
+            this.skinRadioButton2 = new CCWin.SkinControl.SkinRadioButton();
+            this.skinRadioButton1 = new CCWin.SkinControl.SkinRadioButton();
             this.skinButton5 = new CCWin.SkinControl.SkinButton();
             this.xpPanel2 = new UIComponents.XPPanel(81);
             this.itemLayoutPanel3 = new UIComponents.ItemLayoutPanel();
@@ -59,10 +63,6 @@
             this.table_list = new CCWin.SkinControl.SkinComboBox();
             this.show_dataView = new CCWin.SkinControl.SkinDataGridView();
             this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
-            this.skinGroupBox1 = new CCWin.SkinControl.SkinGroupBox();
-            this.skinRadioButton3 = new CCWin.SkinControl.SkinRadioButton();
-            this.skinRadioButton2 = new CCWin.SkinControl.SkinRadioButton();
-            this.skinRadioButton1 = new CCWin.SkinControl.SkinRadioButton();
             this.skinMenuStrip1.SuspendLayout();
             this.skinPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer1)).BeginInit();
@@ -75,6 +75,7 @@
             this.xpPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemLayoutPanel4)).BeginInit();
             this.itemLayoutPanel4.SuspendLayout();
+            this.skinGroupBox1.SuspendLayout();
             this.xpPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemLayoutPanel3)).BeginInit();
             this.itemLayoutPanel3.SuspendLayout();
@@ -85,7 +86,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.itemLayoutPanel1)).BeginInit();
             this.itemLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.show_dataView)).BeginInit();
-            this.skinGroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // skinMenuStrip1
@@ -271,6 +271,89 @@
             this.itemLayoutPanel4.PanelGradient = ((UIComponents.GradientColor)(resources.GetObject("itemLayoutPanel4.PanelGradient")));
             this.itemLayoutPanel4.Size = new System.Drawing.Size(182, 155);
             this.itemLayoutPanel4.TabIndex = 0;
+            // 
+            // skinGroupBox1
+            // 
+            this.skinGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinGroupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.skinGroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.skinGroupBox1.BorderColor = System.Drawing.Color.Silver;
+            this.skinGroupBox1.Controls.Add(this.skinRadioButton3);
+            this.skinGroupBox1.Controls.Add(this.skinRadioButton2);
+            this.skinGroupBox1.Controls.Add(this.skinRadioButton1);
+            this.skinGroupBox1.ForeColor = System.Drawing.Color.Blue;
+            this.skinGroupBox1.Location = new System.Drawing.Point(8, 43);
+            this.skinGroupBox1.Name = "skinGroupBox1";
+            this.skinGroupBox1.RectBackColor = System.Drawing.Color.Transparent;
+            this.skinGroupBox1.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinGroupBox1.Size = new System.Drawing.Size(169, 99);
+            this.skinGroupBox1.TabIndex = 4;
+            this.skinGroupBox1.TabStop = false;
+            this.skinGroupBox1.Text = "导出选项";
+            this.skinGroupBox1.TitleBorderColor = System.Drawing.Color.Transparent;
+            this.skinGroupBox1.TitleRectBackColor = System.Drawing.Color.Transparent;
+            this.skinGroupBox1.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
+            // 
+            // skinRadioButton3
+            // 
+            this.skinRadioButton3.AutoSize = true;
+            this.skinRadioButton3.BackColor = System.Drawing.Color.Transparent;
+            this.skinRadioButton3.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinRadioButton3.DownBack = null;
+            this.skinRadioButton3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinRadioButton3.Location = new System.Drawing.Point(35, 72);
+            this.skinRadioButton3.MouseBack = null;
+            this.skinRadioButton3.Name = "skinRadioButton3";
+            this.skinRadioButton3.NormlBack = null;
+            this.skinRadioButton3.SelectedDownBack = null;
+            this.skinRadioButton3.SelectedMouseBack = null;
+            this.skinRadioButton3.SelectedNormlBack = null;
+            this.skinRadioButton3.Size = new System.Drawing.Size(74, 21);
+            this.skinRadioButton3.TabIndex = 2;
+            this.skinRadioButton3.TabStop = true;
+            this.skinRadioButton3.Text = "导出模板";
+            this.skinRadioButton3.UseVisualStyleBackColor = false;
+            // 
+            // skinRadioButton2
+            // 
+            this.skinRadioButton2.AutoSize = true;
+            this.skinRadioButton2.BackColor = System.Drawing.Color.Transparent;
+            this.skinRadioButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinRadioButton2.DownBack = null;
+            this.skinRadioButton2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinRadioButton2.Location = new System.Drawing.Point(35, 46);
+            this.skinRadioButton2.MouseBack = null;
+            this.skinRadioButton2.Name = "skinRadioButton2";
+            this.skinRadioButton2.NormlBack = null;
+            this.skinRadioButton2.SelectedDownBack = null;
+            this.skinRadioButton2.SelectedMouseBack = null;
+            this.skinRadioButton2.SelectedNormlBack = null;
+            this.skinRadioButton2.Size = new System.Drawing.Size(98, 21);
+            this.skinRadioButton2.TabIndex = 1;
+            this.skinRadioButton2.TabStop = true;
+            this.skinRadioButton2.Text = "导出当前查询";
+            this.skinRadioButton2.UseVisualStyleBackColor = false;
+            // 
+            // skinRadioButton1
+            // 
+            this.skinRadioButton1.AutoSize = true;
+            this.skinRadioButton1.BackColor = System.Drawing.Color.Transparent;
+            this.skinRadioButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinRadioButton1.DownBack = null;
+            this.skinRadioButton1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinRadioButton1.Location = new System.Drawing.Point(35, 19);
+            this.skinRadioButton1.MouseBack = null;
+            this.skinRadioButton1.Name = "skinRadioButton1";
+            this.skinRadioButton1.NormlBack = null;
+            this.skinRadioButton1.SelectedDownBack = null;
+            this.skinRadioButton1.SelectedMouseBack = null;
+            this.skinRadioButton1.SelectedNormlBack = null;
+            this.skinRadioButton1.Size = new System.Drawing.Size(74, 21);
+            this.skinRadioButton1.TabIndex = 0;
+            this.skinRadioButton1.TabStop = true;
+            this.skinRadioButton1.Text = "导出全部";
+            this.skinRadioButton1.UseVisualStyleBackColor = false;
             // 
             // skinButton5
             // 
@@ -631,89 +714,6 @@
             this.skinPanel2.Size = new System.Drawing.Size(808, 114);
             this.skinPanel2.TabIndex = 0;
             // 
-            // skinGroupBox1
-            // 
-            this.skinGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinGroupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.skinGroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.skinGroupBox1.BorderColor = System.Drawing.Color.Silver;
-            this.skinGroupBox1.Controls.Add(this.skinRadioButton3);
-            this.skinGroupBox1.Controls.Add(this.skinRadioButton2);
-            this.skinGroupBox1.Controls.Add(this.skinRadioButton1);
-            this.skinGroupBox1.ForeColor = System.Drawing.Color.Blue;
-            this.skinGroupBox1.Location = new System.Drawing.Point(8, 43);
-            this.skinGroupBox1.Name = "skinGroupBox1";
-            this.skinGroupBox1.RectBackColor = System.Drawing.Color.Transparent;
-            this.skinGroupBox1.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinGroupBox1.Size = new System.Drawing.Size(169, 99);
-            this.skinGroupBox1.TabIndex = 4;
-            this.skinGroupBox1.TabStop = false;
-            this.skinGroupBox1.Text = "导出选项";
-            this.skinGroupBox1.TitleBorderColor = System.Drawing.Color.Transparent;
-            this.skinGroupBox1.TitleRectBackColor = System.Drawing.Color.Transparent;
-            this.skinGroupBox1.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
-            // 
-            // skinRadioButton3
-            // 
-            this.skinRadioButton3.AutoSize = true;
-            this.skinRadioButton3.BackColor = System.Drawing.Color.Transparent;
-            this.skinRadioButton3.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinRadioButton3.DownBack = null;
-            this.skinRadioButton3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinRadioButton3.Location = new System.Drawing.Point(35, 72);
-            this.skinRadioButton3.MouseBack = null;
-            this.skinRadioButton3.Name = "skinRadioButton3";
-            this.skinRadioButton3.NormlBack = null;
-            this.skinRadioButton3.SelectedDownBack = null;
-            this.skinRadioButton3.SelectedMouseBack = null;
-            this.skinRadioButton3.SelectedNormlBack = null;
-            this.skinRadioButton3.Size = new System.Drawing.Size(74, 21);
-            this.skinRadioButton3.TabIndex = 2;
-            this.skinRadioButton3.TabStop = true;
-            this.skinRadioButton3.Text = "导出模板";
-            this.skinRadioButton3.UseVisualStyleBackColor = false;
-            // 
-            // skinRadioButton2
-            // 
-            this.skinRadioButton2.AutoSize = true;
-            this.skinRadioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.skinRadioButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinRadioButton2.DownBack = null;
-            this.skinRadioButton2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinRadioButton2.Location = new System.Drawing.Point(35, 46);
-            this.skinRadioButton2.MouseBack = null;
-            this.skinRadioButton2.Name = "skinRadioButton2";
-            this.skinRadioButton2.NormlBack = null;
-            this.skinRadioButton2.SelectedDownBack = null;
-            this.skinRadioButton2.SelectedMouseBack = null;
-            this.skinRadioButton2.SelectedNormlBack = null;
-            this.skinRadioButton2.Size = new System.Drawing.Size(98, 21);
-            this.skinRadioButton2.TabIndex = 1;
-            this.skinRadioButton2.TabStop = true;
-            this.skinRadioButton2.Text = "导出当前查询";
-            this.skinRadioButton2.UseVisualStyleBackColor = false;
-            // 
-            // skinRadioButton1
-            // 
-            this.skinRadioButton1.AutoSize = true;
-            this.skinRadioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.skinRadioButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinRadioButton1.DownBack = null;
-            this.skinRadioButton1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinRadioButton1.Location = new System.Drawing.Point(35, 19);
-            this.skinRadioButton1.MouseBack = null;
-            this.skinRadioButton1.Name = "skinRadioButton1";
-            this.skinRadioButton1.NormlBack = null;
-            this.skinRadioButton1.SelectedDownBack = null;
-            this.skinRadioButton1.SelectedMouseBack = null;
-            this.skinRadioButton1.SelectedNormlBack = null;
-            this.skinRadioButton1.Size = new System.Drawing.Size(74, 21);
-            this.skinRadioButton1.TabIndex = 0;
-            this.skinRadioButton1.TabStop = true;
-            this.skinRadioButton1.Text = "导出全部";
-            this.skinRadioButton1.UseVisualStyleBackColor = false;
-            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 14F);
@@ -745,6 +745,8 @@
             this.xpPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.itemLayoutPanel4)).EndInit();
             this.itemLayoutPanel4.ResumeLayout(false);
+            this.skinGroupBox1.ResumeLayout(false);
+            this.skinGroupBox1.PerformLayout();
             this.xpPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.itemLayoutPanel3)).EndInit();
             this.itemLayoutPanel3.ResumeLayout(false);
@@ -755,8 +757,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.itemLayoutPanel1)).EndInit();
             this.itemLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.show_dataView)).EndInit();
-            this.skinGroupBox1.ResumeLayout(false);
-            this.skinGroupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

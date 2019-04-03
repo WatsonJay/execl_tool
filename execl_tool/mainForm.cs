@@ -51,6 +51,7 @@ namespace execl_tool
             reader = main_db.show_table(show_name);
             show_dataView.DataSource = reader;
             show_dataView.Columns[0].Visible = false;
+            show_dataView.AutoSize = true;
         }
     }
 }
