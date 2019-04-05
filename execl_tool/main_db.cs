@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 
@@ -15,7 +16,7 @@ namespace execl_tool
             List<string> list = new List<string>();
             string sql = "SELECT ID,table_name,table_show_name FROM table_relation";
             DataTable dt = new DataTable();
-            dt = db_connect.getdata(sql);
+            dt = Db_connect.getdata(sql);
             foreach (DataRow row in dt.Rows)
             {
                 list.Add(row[2].ToString());
@@ -28,7 +29,7 @@ namespace execl_tool
             string sql = "SELECT table_name FROM table_relation where table_show_name = '"+ show_name + "'";
             string table_name = "";
             DataTable dt = new DataTable();
-            dt = db_connect.getdata(sql);
+            dt = Db_connect.getdata(sql);
             if (dt.Rows.Count != 1)
             {
                 throw new MyException("存在多条重复数据");
@@ -40,12 +41,11 @@ namespace execl_tool
             return table_name;
         }
 
-        public static DataTable show_table(string show_name)
+        public static DataTable show_table(string table_name)
         {
-           string table_name = get_table_name(show_name);
            string sql = "SELECT * FROM "+ table_name;
            DataTable dt = new DataTable();
-           dt = db_connect.getdata(sql);
+           dt = Db_connect.getdata(sql);
            return dt;
         }
 
@@ -55,12 +55,42 @@ namespace execl_tool
             List<string> list = new List<string>();
             string sql = "SELECT ID,table_name,table_show_name FROM table_relation";
             DataTable dt = new DataTable();
-            dt = db_connect.getdata(sql);
+            dt = Db_connect.getdata(sql);
             foreach (DataRow row in dt.Rows)
             {
                 list.Add(row[2].ToString());
             }
             return list;
+        }
+
+        public static List<string> GetTableFieldNameList(string TableName)
+        {
+            List<string> list = new List<string>();
+            OleDbConnection Conn = new OleDbConnection(conStr);
+            try
+            {
+                if (Conn.State == ConnectionState.Closed)
+                    Conn.Open();
+                using (OleDbCommand cmd = new OleDbCommand())
+                {
+                    cmd.CommandText = "SELECT TOP 1 * FROM [" + TableName + "]";
+                    cmd.Connection = Conn;
+                    OleDbDataReader dr = cmd.ExecuteReader();
+                    for (int i = 0; i < dr.FieldCount; i++)
+                    {
+                        list.Add(dr.GetName(i));
+                    }
+                }
+                return list;
+            }
+            catch (Exception e)
+            { throw e; }
+            finally
+            {
+                if (Conn.State == ConnectionState.Open)
+                    Conn.Close();
+                Conn.Dispose();
+            }
         }
     }
 }

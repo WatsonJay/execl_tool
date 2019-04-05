@@ -14,7 +14,7 @@ namespace execl_tool
         {
             string sql = "SELECT ID,table_name,table_show_name FROM table_relation";
             DataTable dt = new DataTable();
-            dt = db_connect.getdata(sql);
+            dt = Db_connect.getdata(sql);
             return dt;
         }
 
@@ -55,12 +55,12 @@ namespace execl_tool
             para[0].Value = table;
             para[1].Value = show_name;
 
-            db_connect.runsql(sql, para);
+            Db_connect.runsql(sql, para);
         }
         public static bool have_relation(string table)
         {
             string sql_search = "SELECT ID,table_name,table_show_name FROM table_relation WHERE table_name ='" + table+"'";
-            return db_connect.have_line(sql_search);
+            return Db_connect.have_line(sql_search);
         }
 
         public static void delrelation(int ID)
@@ -77,7 +77,7 @@ namespace execl_tool
                          };
             para[0].Value = ID;
 
-            db_connect.runsql(sql, para);
+            Db_connect.runsql(sql, para);
         }
 
         public static void updaterelation(int ID, string table, string show_name)
@@ -98,7 +98,7 @@ namespace execl_tool
             para[1].Value = show_name;
             para[2].Value = ID;
 
-            db_connect.runsql(sql, para);
+            Db_connect.runsql(sql, para);
         }
     }
 }

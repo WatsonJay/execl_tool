@@ -654,6 +654,10 @@
             // 
             // show_dataView
             // 
+            this.show_dataView.AllowUserToAddRows = false;
+            this.show_dataView.AllowUserToDeleteRows = false;
+            this.show_dataView.AllowUserToResizeColumns = false;
+            this.show_dataView.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.show_dataView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.show_dataView.BackgroundColor = System.Drawing.SystemColors.Window;
@@ -670,7 +674,7 @@
             this.show_dataView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.show_dataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.show_dataView.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
@@ -685,7 +689,9 @@
             this.show_dataView.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
             this.show_dataView.Location = new System.Drawing.Point(0, 0);
             this.show_dataView.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.show_dataView.MultiSelect = false;
             this.show_dataView.Name = "show_dataView";
+            this.show_dataView.ReadOnly = true;
             this.show_dataView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.show_dataView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -693,6 +699,7 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.show_dataView.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.show_dataView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.show_dataView.RowTemplate.Height = 23;
             this.show_dataView.Size = new System.Drawing.Size(585, 456);
             this.show_dataView.TabIndex = 0;

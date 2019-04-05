@@ -46,12 +46,24 @@ namespace execl_tool
 
         private void choose_table_Click(object sender, EventArgs e)
         {
-            string show_name = table_list.Text;
-            DataTable reader = new DataTable();
-            reader = main_db.show_table(show_name);
-            show_dataView.DataSource = reader;
-            show_dataView.Columns[0].Visible = false;
-            show_dataView.AutoSize = true;
+            try
+            {
+                string show_name = table_list.Text;
+                string table_name = main_db.get_table_name(show_name);
+                DataTable reader = new DataTable();
+                reader = main_db.show_table(table_name);
+                show_dataView.DataSource = reader;
+                show_dataView.Columns[0].Visible = false;
+                List<string> name = main_db.GetTableFieldNameList(table_name);
+                for (int i=show_dataView.ColumnCount; i>=1; i--){
+                    show_dataView.Columns[i - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    show_dataView.Columns[i - 1].HeaderCell.Value = name[i-1];
+                }
+            }
+            catch
+            {
+                MessageBox.Show("数据加载异常，请联系管理员");
+            }
         }
     }
 }

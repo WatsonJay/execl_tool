@@ -7,7 +7,7 @@ using System.Text;
 
 namespace execl_tool
 {
-    class db_connect
+    class Db_connect
     {
         static string conStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=execl_tool.accdb;Persist Security Info=False";
 
